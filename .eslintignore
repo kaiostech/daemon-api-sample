@@ -1,0 +1,4 @@
+node_modules
+
+# disable vendors js file
+vendors

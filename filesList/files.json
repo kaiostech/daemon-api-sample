@@ -1,0 +1,47 @@
+{
+  "app": [
+    "http://127.0.0.1/api/v1/apps/service.js",
+    "services/appmanager/js/appmanager.js",
+    "services/appmanager/js/app.js"
+  ],
+  "audioVolume": [
+    "http://127.0.0.1/api/v1/audiovolumemanager/service.js",
+    "services/audiovolumemanager/js/audiovolume.js",
+    "services/audiovolumemanager/js/app.js"
+  ],
+  "contacts": [
+    "http://127.0.0.1/api/v1/contacts/service.js",
+    "services/contacts/js/contacts.js",
+    "services/contacts/js/app.js"
+  ],
+  "deviceCapability": [
+    "http://127.0.0.1/api/v1/devicecapability/service.js",
+    "services/devicecapability/js/devicecapability.js",
+    "services/devicecapability/js/app.js"
+  ],
+  "power": [
+    "http://127.0.0.1/api/v1/powermanager/service.js",
+    "services/powermanager/js/power.js",
+    "services/powermanager/js/app.js"
+  ],
+  "settings": [
+    "http://127.0.0.1/api/v1/settings/service.js",
+    "services/settings/js/settings.js",
+    "services/settings/js/app.js"
+  ],
+  "tcpSocket": [
+    "http://127.0.0.1/api/v1/tcpsocket/service.js",
+    "services/tcpsocket/js/tcpsocket.js",
+    "services/tcpsocket/js/app.js"
+  ],
+  "telephony": [
+    "http://127.0.0.1/api/v1/telephony/service.js",
+    "services/telephony/js/telephony.js",
+    "services/telephony/js/app.js"
+  ],
+  "timeService": [
+    "http://127.0.0.1/api/v1/time/service.js",
+    "services/timeservice/js/timeservice.js",
+    "services/timeservice/js/app.js"
+  ]
+}

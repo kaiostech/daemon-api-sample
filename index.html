@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+  <meta name="theme-color" content="#381e0d">
+  <title>New APIs Demo</title>
+  <meta name="defaultLanguage" content="en-US">
+  <meta name="availableLanguages" content="en-US, zh-CN, zh-TW">
+  <link rel="stylesheet" type="text/css" href="http://shared.localhost/style/gaia_theme/gaia-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="http://shared.localhost/style/gaia_theme/gaia-font.css"/>
+  <link rel="stylesheet" type="text/css" href="./style/style.css"/>
+  <script defer src="http://shared.localhost/js/utils/l10n/l10n.js"></script>
+  <script defer src="http://shared.localhost/js/utils/common/lazy_loader.js"></script>
+  <script defer src="http://shared.localhost/elements/gaia_header/gaia_header.js"></script>
+  <!-- Daemon APIs script -->
+  <script type="text/javascript" src="http://127.0.0.1/api/v1/shared/core.js"></script>
+  <script type="text/javascript" src="http://127.0.0.1/api/v1/shared/session.js"></script>
+  <!-- utils js -->
+  <script type="text/javascript" src="js/utils.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <!-- navigation helper -->
+  <script type="text/javascript" src="vendors/navigation/naviboard.min.js"></script>
+</head>
+<body class="theme-productivity">
+<section class="content" id="root">
+  <div class="header">
+    <gaia-header>
+      <h2 slot="text" class="header">Services</h2>
+    </gaia-header>
+  </div>
+  <div class="test-area wrapper" id="navigationArea">
+    <div class="button navigable" key="appmanager">
+      <span>AppManager</span>
+    </div>
+    <div class="button navigable" key="audiovolumemanager">
+      <span>AudioVolumeManager</span>
+    </div>
+    <div class="button navigable" key="contacts">
+      <span>Contacts</span>
+    </div>
+    <div class="button navigable" key="devicecapability">
+      <span>DeviceCapability</span>
+    </div>
+    <div class="button navigable" key="powermanager">
+      <span>PowerManager</span>
+    </div>
+    <div class="button navigable" key="settings">
+      <span>Settings</span>
+    </div>
+    <div class="button navigable" key="tcpsocket">
+      <span>TcpSocket</span>
+    </div>
+    <div class="button navigable"  key="telephony">
+      <span>Telephony</span>
+    </div>
+    <div class="button navigable" key="timeservice">
+      <span>TimeService</span>
+    </div>
+  </div>
+</section>
+<section class="softKey" id="softKey">
+</body>
+</html>

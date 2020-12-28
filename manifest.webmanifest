@@ -1,0 +1,37 @@
+{
+  "name": "daemon-apis sample",
+  "description": "new APIs sample",
+  "theme_color": "#ffffff",
+  "orientation": "default",
+  "lang": "en-US",
+  "start_url": "/index.html",
+  "icons": [
+    {
+      "src": "/icons/sample_56.png",
+      "type": "image/png",
+      "sizes": "56x56"
+    },
+    {
+      "src": "/icons/sample_112.png",
+      "type": "image/png",
+      "sizes": "112x112"
+    }
+  ],
+  "b2g_features": {
+    "type": "certified",
+    "permissions": {
+      "external-api": {},
+      "webapps-manage": {},
+      "settings": {
+        "access": "readwrite"
+      },
+      "contacts": {
+        "access": "readwrite"
+      },
+      "power": {},
+      "feature-detection": {}
+    },
+    "core": true,
+    "version": "0.1"
+  }
+}

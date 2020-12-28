@@ -1,0 +1,14 @@
+{
+  "extends": ["airbnb-base"],
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true
+  },
+  "rules": {
+    "no-console": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off",
+    "func-names": "off"
+  }
+}

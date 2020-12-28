@@ -1,0 +1,77 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  font-family: "Open Sans";
+  -moz-user-select: none;
+}
+
+#root.hidden {
+  display: none;
+}
+
+.button {
+  border-style:outset;
+  vertical-align: middle;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 1.8rem;
+  padding-left: 1rem;
+}
+
+.button:focus {
+  text-decoration: none;
+  border: 0.2rem solid red !important;
+}
+
+.focus {
+  background-color: #12c0d0;
+}
+
+.content {
+  height: calc(100% - 3rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+}
+
+.test-area {
+  width: 100%;
+  overflow: auto;
+}
+
+.softKey {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: var(--softkeybar-height, 3rem);
+  width: 100%;
+  z-index: 10;
+  display: grid !important;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.softKey button {
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: #dadada;
+  border-radius: 0;
+}
+
+.softKey button:first-child {
+  text-align: left;
+  min-width: 1rem;
+}
+
+.softKey button:last-child {
+  text-align: right;
+  min-width: 1rem;
+}
