@@ -118,8 +118,21 @@ const ContactsService = {
           this._contactsService.getAll({
             sortBy: lib_contacts.SortOption.FAMILY_NAME,
             sortOrder: lib_contacts.Order.DESCENDING,
-          }, 2, false, (status) => {
-            console.log(`call getAll status ${status}`);
+          }, 2, false, (cursor) => {
+            const fetchData = () => {
+              cursor
+                .next()
+                .then(contacts => {
+                  this._contacts = this._contacts.concat(contacts);
+                  console.log('fetching');
+                  fetchData();
+                })
+                .catch(error => {
+                  cursor.release();
+                  console.log('All contacts fetched:', this._contacts);
+                });
+            };
+            fetchData();
           });
           break;
         case 'getCount':
@@ -155,8 +168,21 @@ const ContactsService = {
             filterOption: lib_contacts.FilterOption.CONTAINS,
             filterBy: [lib_contacts.FilterByOption.NAME],
             onlyMainData: false,
-          }, 20, (status) => {
-            console.log(`call find status ${status}`);
+          }, 20, (cursor) => {
+            const fetchData = () => {
+              cursor
+                .next()
+                .then(contacts => {
+                  this._contacts = this._contacts.concat(contacts);
+                  console.log('fetching');
+                  fetchData();
+                })
+                .catch(error => {
+                  cursor.release();
+                  console.log('All contacts find', this._contacts);
+                });
+            };
+            fetchData();
           });
           break;
         case 'findBlockedNumbers':

@@ -40,10 +40,15 @@
         callback('error');
       });
     },
-
+    /**
+     * @param options: ContactSortOptions
+     * @param numbers: only return numbers of contacts after every cursor.next()
+     * @param onlyMainData: only return main table data, would be faster but less info.
+     * @return dom cursor, if done, must release the cursor by cursor.release().
+     */
     getAll: function getAll(options, batchSize, onlyMainData, callback) {
-      _contactsService.getAll(options, batchSize, onlyMainData).then(() => {
-        callback('success');
+      _contactsService.getAll(options, batchSize, onlyMainData).then((cursor) => {
+        callback(cursor);
       }, () => {
         callback('error');
       });
@@ -88,10 +93,22 @@
         callback('error');
       });
     },
-
+    // find
+    /* ContactFindSortOptions = {
+       *    sortBy：// ContactsManager.SortOption
+       *    sortOrder// ContactsManager.Order
+       *    sortLanguage: eg: navigator.language || 'de'
+       *    filterValue: // e.g. "Tom" "123456"
+       *    filterOption: // [ContactsManager.FilterOption.xxx, ...]
+       *    filterBy: // ContactsManager.FilterByOption.xxx
+       *    onlyMainData: {bool} Only return the main data of a contact or not.
+       *  }
+       * @param numbers: only return numbers of contacts after every cursor.next()
+       * @return dom cursor if done, must release the cursor by cursor.release().
+    */
     find: function find(params, batchSize, callback) {
-      _contactsService.find(params, batchSize).then(() => {
-        callback('success');
+      _contactsService.find(params, batchSize).then((cursor) => {
+        callback(cursor);
       }, () => {
         callback('error');
       });
