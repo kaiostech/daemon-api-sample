@@ -13,7 +13,7 @@ Load the following scripts:
 ```html
 <script src="http://127.0.0.1/api/v1/shared/core.js"></script>
 <script src="http://127.0.0.1/api/v1/shared/session.js"></script>
-<script src="http://127.0.0.1/api/v1/apps/service.js"></script>
+<script src="http://127.0.0.1/api/v1/devicecapability/service.js"></script>
 ```
 
 You can then get an instance of the service with code similar to:
